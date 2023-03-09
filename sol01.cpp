@@ -30,10 +30,20 @@ int main(int argc, char *argv[]) {
         in >> fuffa;
         len_S.push_back(fuffa);
     }
+    string cella;
     for (int i = 0; i < R; i++) {
         for (int j = 0; j < C; j++) {
-        in >> matrix[i][j];
+            in >> cella;
+            if (cella == "*"){
+                matrix[i][j] = -1;
+            }
+            else {
+                matrix[i][j] = stoi(cella);
+            }
+            out << matrix[i][j];
+
         }
     }
+
 
 }
