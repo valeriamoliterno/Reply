@@ -5,13 +5,14 @@
 
 using namespace std;
 
-ifstream in("input.txt");
+ifstream in("00-example.txt");
 ofstream out("output.txt");
 
 #define INF ULONG_MAX
 
 int C, R, S;
 vector<int> len_S;
+vector<vector<int>> matrix;
 
 typedef uint64_t ll;
 typedef vector<int> vi;
@@ -22,13 +23,17 @@ typedef vector<vector<int>> vvi;
 int main(int argc, char *argv[]) {
     in >> C >> R >> S;
     len_S.resize(S);
+    matrix.resize(R, vector<int>(C));
 
-    // for (int i = 0; i < m; i++) {
-    //     int a, b;
-    //     ll c;
-    //     in >> a >> b >> c;
-    //     if (a == b) continue;
-    //     edges[i] = {a, b, c, c, false};
-    //     g[a].emplace_back(i);
-    // }
+    int fuffa;
+    for (int i = 0; i < S; i++) {
+        in >> fuffa;
+        len_S.push_back(fuffa);
+    }
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+        in >> matrix[i][j];
+        }
+    }
+
 }
